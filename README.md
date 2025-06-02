@@ -27,8 +27,8 @@ A modern, visually stunning personal portfolio website for Piyush Mandal, an AIM
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/piyush/portfolio.git
-   cd portfolio
+   git clone https://github.com/ITSNOT-PIYUSH/ITSNOT-PIYUSH.github.io.git
+   cd ITSNOT-PIYUSH.github.io
    ```
 
 2. **Install dependencies**
@@ -114,13 +114,13 @@ portfolio/
 - Personal story and background
 
 ### 🔧 Skills
-- Category-based skill display (AI/ML, Tools, Web Dev)
-- Circular progress indicators for technical skills
-- Animated progress bars for tools and web technologies
-- Skill level percentages with smooth animations
+- Category-based skill display (AI/ML, Tools)
+- Circular progress indicators for all skills
+- Smooth animations and hover effects
+- Clean design without percentages
 
 ### 🚀 Projects
-- Filterable project grid
+- Filterable project grid (AI/ML focus)
 - Expandable project cards
 - Technology tags
 - GitHub and demo links
@@ -179,11 +179,13 @@ Update personal information in the respective component files:
 2. Connect your repository to Vercel
 3. Deploy automatically
 
+### GitHub Pages
+This repository is configured for GitHub Pages deployment at [https://itsnot-piyush.github.io](https://itsnot-piyush.github.io)
+
 ### Other Platforms
 The project can be deployed on any platform that supports Next.js:
 - Netlify
 - AWS Amplify
-- GitHub Pages (with static export)
 
 ## 🤝 Contributing
 
@@ -197,10 +199,9 @@ This project is open source and available under the [MIT License](LICENSE).
 
 AIML Engineering student based in Bangalore, India. Passionate about artificial intelligence, machine learning, and creating innovative solutions that bridge technology and real-world applications.
 
-- **GitHub**: [github.com/piyush-mandal](https://github.com/piyush-mandal)
-- **LinkedIn**: [linkedin.com/in/piyush-mandal](https://linkedin.com/in/piyush-mandal)
-- **Email**: piyush.mandal@email.com
+- **GitHub**: [github.com/ITSNOT-PIYUSH](https://github.com/ITSNOT-PIYUSH)
+- **Portfolio**: [https://itsnot-piyush.github.io](https://itsnot-piyush.github.io)
 
 ---
 
-⭐ Star this repository if you find it helpful! 
+⭐ Star this repository if you find it helpful!
