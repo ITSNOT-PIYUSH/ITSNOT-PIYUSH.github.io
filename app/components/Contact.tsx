@@ -153,6 +153,14 @@ const Contact = () => {
                   className="glass px-6 py-3 rounded-xl text-white font-semibold hover:glass-light transition-all duration-150 w-full sm:w-auto"
                   whileHover={{ scale: 1.08, y: -3 }}
                   whileTap={{ scale: 0.95 }}
+                  onClick={() => {
+                    const link = document.createElement('a')
+                    link.href = '/Resume_copy.pdf'
+                    link.download = 'Piyush_Mandal_Resume.pdf'
+                    document.body.appendChild(link)
+                    link.click()
+                    document.body.removeChild(link)
+                  }}
                 >
                   <span className="flex items-center justify-center gap-2">
                     <Download className="w-5 h-5" />
