@@ -34,7 +34,7 @@ const Projects = () => {
       fullDescription: 'Developed a robust image classification system using convolutional neural networks. Achieved 95% accuracy on custom dataset with data augmentation and transfer learning techniques.',
       tech: ['PyTorch', 'OpenCV', 'FastAPI', 'Docker'],
       image: 'https://images.unsplash.com/photo-1516110833967-0b5716ca1387?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      github: 'https://github.com/ITSNOT-PIYUSH',
+      github: 'https://github.com/ITSNOT-PIYUSH/image-classifier',
       featured: true,
     },
     {
