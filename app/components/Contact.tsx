@@ -54,7 +54,7 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="py-20 relative overflow-hidden">
+    <section id="contact" className="py-20 relative overflow-hidden isolate">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
@@ -83,7 +83,7 @@ const Contact = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-8 max-w-2xl mx-auto"
+              className="space-y-8 max-w-2xl mx-auto relative z-10"
             >
               <div>
                 <h3 className="text-2xl font-semibold text-white mb-6">Let's Connect</h3>
@@ -122,21 +122,32 @@ const Contact = () => {
               {/* Social Links */}
               <div>
                 <h4 className="text-lg font-semibold text-white mb-4">Follow Me</h4>
-                <div className="flex space-x-4 justify-center lg:justify-start">
+                <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
                   {socialLinks.map((social, index) => (
                     <motion.a
                       key={index}
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`p-3 glass rounded-xl ${social.color} transition-all duration-150`}
+                      className={`p-3 glass rounded-xl ${social.color} transition-all duration-150 cursor-pointer touch-manipulation relative z-10`}
                       initial={{ opacity: 0, scale: 0.5 }}
                       animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }}
                       transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
                       whileHover={{ scale: 1.15, y: -4 }}
                       whileTap={{ scale: 0.95 }}
+                      style={{ 
+                        WebkitTapHighlightColor: 'transparent',
+                        userSelect: 'none',
+                        touchAction: 'manipulation'
+                      }}
+                      onTouchStart={(e) => {
+                        e.currentTarget.style.transform = 'scale(0.95)';
+                      }}
+                      onTouchEnd={(e) => {
+                        e.currentTarget.style.transform = 'scale(1)';
+                      }}
                     >
-                      <social.icon className="w-6 h-6" />
+                      <social.icon className="w-6 h-6 pointer-events-none" />
                     </motion.a>
                   ))}
                 </div>
@@ -174,8 +185,8 @@ const Contact = () => {
       </div>
 
       {/* Background decoration */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-emerald-100/5 to-transparent rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-tl from-slate-300/5 to-transparent rounded-full blur-3xl" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-emerald-100/5 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-tl from-slate-300/5 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
     </section>
   )
 }
